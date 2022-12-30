@@ -136,7 +136,7 @@ stages:
                                       -e -f -o log/jmeter/stress-test-html-report \
                                       -j log/jmeter/jmeter-stress-test.log
         pwd
-        ls '/home/vsts/work/1/s/log/jmeter'
+        ls '/home/vsts/work/1/s/log/jmeter/stress-test-html-report'
       displayName: JMeter stress test
     - bash: |
         mkdir -p log/jmeter/endurance-test-html-report
@@ -145,7 +145,7 @@ stages:
                                       -e -f -o log/jmeter/endurance-test-html-report \
                                       -j log/jmeter/jmeter-endurance-test.log
         pwd      
-        ls '/home/vsts/work/1/s/log/jmeter'                             
+        ls '/home/vsts/work/1/s/log/jmeter/endurance-test-html-report'                             
       displayName: JMeter endurance test
     - task: ArchiveFiles@2
       displayName: Publish JMeter stress test HTML report

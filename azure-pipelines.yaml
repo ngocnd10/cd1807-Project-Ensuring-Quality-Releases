@@ -98,7 +98,7 @@ stages:
   # ToDo: Provide <environment name> you created in your DevOps project
   - deployment: FakeRestAPI
     pool:
-      vmImage: 'Ubuntu-20.04'      
+      vmImage: 'Ubuntu-18.04'      
     environment: 'test'
     strategy:
       runOnce:
@@ -116,7 +116,8 @@ stages:
   - job: Test_Jmeter
     displayName: Performance Testing
     pool:
-      vmImage: 'Ubuntu-20.04'
+      vmImage: 'Ubuntu-18.04'
+    environment: 'test'
     steps:
     - bash: |
         sudo apt-get install openjdk-11-jre-headless -y
@@ -129,13 +130,13 @@ stages:
         ls -la
       displayName: Install JMeter
     - bash: |
-        apache-jmeter-5.4/bin/jmeter -n -t jmeter/StressTest.jmx \
+        apache-jmeter-5.4/bin/jmeter -n -t automatedtesting/jmeter/StressTest.jmx \
                                       -l log/jmeter/stress-test-result.csv \
                                       -e -f -o log/jmeter/stress-test-html-report \
                                       -j log/jmeter/jmeter-stress-test.log
       displayName: JMeter stress test
     - bash: |
-        apache-jmeter-5.4/bin/jmeter -n -t jmeter/EnduranceTest.jmx \
+        apache-jmeter-5.4/bin/jmeter -n -t automatedtesting/jmeter/EnduranceTest.jmx \
                                       -l log/jmeter/endurance-test-result.csv \
                                       -e -f -o log/jmeter/endurance-test-html-report \
                                       -j log/jmeter/jmeter-endurance-test.log

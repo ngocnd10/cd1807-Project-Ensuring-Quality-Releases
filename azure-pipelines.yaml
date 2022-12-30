@@ -14,6 +14,7 @@ variables:
   python.version: '3.7.6'
   # ToDo: Replace the service connection name as used in the DevOps project settings
   azureServiceConnectionId: 'myServiceConnection'
+  azureServiceConnectionId2: 'myServiceConnection2'
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
   # Environment name
@@ -106,8 +107,8 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
             inputs:
-              azureSubscription: '$(azureServiceConnectionId)'
-              appName: 'ngocnd7-p3-storage-app-service'
+              azureSubscription: '$(azureServiceConnectionId2)'
+              appName: 'ngocnd7-p3-app-AppService'
               appType: webApp
               package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
            

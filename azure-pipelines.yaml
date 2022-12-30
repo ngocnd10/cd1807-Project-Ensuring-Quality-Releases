@@ -98,7 +98,7 @@ stages:
   - deployment: FakeRestAPI
     pool:
       vmImage: 'Ubuntu-20.04'      
-    environment: '${environmentName}'
+    environment: 'test'
     strategy:
       runOnce:
         deploy:

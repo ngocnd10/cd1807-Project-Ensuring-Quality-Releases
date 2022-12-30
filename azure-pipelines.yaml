@@ -114,7 +114,7 @@ stages:
 - stage: Test
   jobs:
   - job: Test_Jmeter
-    displayName: Performance Testing
+    displayName: PerformanceTesting
     pool:
       vmImage: 'Ubuntu-18.04'
     steps:
@@ -156,13 +156,6 @@ stages:
         archiveType: 'zip'
         archiveFile: '$(System.DefaultWorkingDirectory)/log/jmeter/endurance-test-html-report-$(Build.BuildId).zip'
         verbose: true
-    - bash: |
-        rm -rf log/jmeter/stress-test-html-report
-        rm -rf log/jmeter/endurance-test-html-report
-        cd log/jmeter
-        pwd
-        ls -la
-      displayName: Delete original JMeter test HTML reports
     - task: PublishPipelineArtifact@1
       displayName: Publish JMeter logs
       inputs:

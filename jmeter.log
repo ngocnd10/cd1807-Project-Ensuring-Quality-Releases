@@ -1,0 +1,44 @@
+2022-12-31 00:28:57,453 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2022-12-31 00:28:57,465 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.5/libexec/bin/user.properties
+2022-12-31 00:28:57,465 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.5/libexec/bin/system.properties
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: Copyright (c) 1998-2022 The Apache Software Foundation
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: Version 5.5
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: java.version=19.0.1
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: os.name=Mac OS X
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: os.arch=aarch64
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: os.version=12.1
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: file.encoding=UTF-8
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: java.awt.headless=null
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: Max memory     =1073741824
+2022-12-31 00:28:57,468 INFO o.a.j.JMeter: Available Processors =8
+2022-12-31 00:28:57,473 INFO o.a.j.JMeter: Default Locale=English (EN)
+2022-12-31 00:28:57,473 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2022-12-31 00:28:57,474 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.5/libexec
+2022-12-31 00:28:57,474 INFO o.a.j.JMeter: user.dir  =/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases
+2022-12-31 00:28:57,474 INFO o.a.j.JMeter: PWD       =/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases
+2022-12-31 00:28:57,476 INFO o.a.j.JMeter: IP: 125.235.4.59 Name: LPP00125809I FullName: 125.235.4.59.adsl.viettel.vn
+2022-12-31 00:28:57,480 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-12-31 00:28:57,642 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2022-12-31 00:28:58,846 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-5f86a93f03da0fd0a345cec8a3a2ccc4-gui
+2022-12-31 00:29:01,099 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.7, jmeter-core=5.5, jmeter-ftp=5.5, jmeter-http=5.5, jmeter-jdbc=5.5, jmeter-jms=5.5, jmeter-junit=5.5, jmeter-java=5.5, jmeter-ldap=5.5, jmeter-mail=5.5, jmeter-mongodb=5.5, jmeter-native=5.5, jmeter-tcp=5.5, jmeter-components=5.5]
+2022-12-31 00:29:01,099 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2022-12-31 00:29:04,989 INFO o.a.j.s.FileServer: Default base='/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases'
+2022-12-31 00:29:05,006 INFO o.a.j.g.a.Load: Loading file: /Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter/EnduranceTest.jmx
+2022-12-31 00:29:05,006 INFO o.a.j.s.FileServer: Set new base='/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter'
+2022-12-31 00:29:05,099 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-12-31 00:29:05,102 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-12-31 00:29:05,103 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-12-31 00:29:05,104 INFO o.a.j.s.SaveService: Loading file: /Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter/EnduranceTest.jmx
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-12-31 00:29:05,157 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-12-31 00:29:05,301 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-12-31 00:29:05,301 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-12-31 00:29:05,301 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-12-31 00:29:05,301 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-12-31 00:29:05,362 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-12-31 00:29:05,394 INFO o.a.j.s.FileServer: Set new base='/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter'

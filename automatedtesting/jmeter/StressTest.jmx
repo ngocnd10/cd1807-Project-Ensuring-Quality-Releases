@@ -56,7 +56,7 @@
       </HeaderManager>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV BookIDs Source" enabled="true">
-        <stringProp name="filename">/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter/book_ids.csv</stringProp>
+        <stringProp name="filename">automatedtesting/jmeter/book_ids.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">bookId</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
@@ -68,7 +68,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Book Objs" enabled="true">
-        <stringProp name="filename">/Users/ngocnd7/Documents/Training/Udacity Cloud DevOps using Azure/Project 3 - Ensuring Quality Releases (Quality Assurance)/cd1807-Project-Ensuring-Quality-Releases/automatedtesting/jmeter/objs_books.csv</stringProp>
+        <stringProp name="filename">automatedtesting/jmeter/objs_books.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">BookID,BookTitle,BookDescription,BookPageCount,BookExcerpt,BookPublishDate</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>

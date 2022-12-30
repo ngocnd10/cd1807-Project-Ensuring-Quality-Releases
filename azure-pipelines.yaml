@@ -127,18 +127,27 @@ stages:
         mkdir -p log/jmeter
         pwd
         ls -la
+        ls '/home/vsts/work/1/s'
       displayName: Install JMeter
     - bash: |
         apache-jmeter-5.4/bin/jmeter -n -t automatedtesting/jmeter/StressTest.jmx \
                                       -l log/jmeter/stress-test-result.csv \
                                       -e -f -o log/jmeter/stress-test-html-report \
                                       -j log/jmeter/jmeter-stress-test.log
+        pwd
+        ls -la
+        ls '/home/vsts/work/1/s'
       displayName: JMeter stress test
     - bash: |
         apache-jmeter-5.4/bin/jmeter -n -t automatedtesting/jmeter/EnduranceTest.jmx \
                                       -l log/jmeter/endurance-test-result.csv \
                                       -e -f -o log/jmeter/endurance-test-html-report \
                                       -j log/jmeter/jmeter-endurance-test.log
+        pwd
+        ls -la
+        ls '/home/vsts/work/1/s'
+        ls '/home/vsts/work/1/s/log'
+        ls '/home/vsts/work/1/s/log/jmeter'                                     
       displayName: JMeter endurance test
     - task: ArchiveFiles@2
       displayName: Publish JMeter stress test HTML report
@@ -147,7 +156,7 @@ stages:
         includeRootFolder: false
         archiveType: 'zip'
         archiveFile: '$(System.DefaultWorkingDirectory)/log/jmeter/stress-test-html-report-$(Build.BuildId).zip'
-        # verbose: true
+        verbose: true
     - task: ArchiveFiles@2
       displayName: Publish JMeter endurance test HTML report
       inputs:
@@ -155,7 +164,7 @@ stages:
         includeRootFolder: false
         archiveType: 'zip'
         archiveFile: '$(System.DefaultWorkingDirectory)/log/jmeter/endurance-test-html-report-$(Build.BuildId).zip'
-        # verbose: true
+        verbose: true
     - task: PublishPipelineArtifact@1
       displayName: Publish JMeter logs
       inputs:

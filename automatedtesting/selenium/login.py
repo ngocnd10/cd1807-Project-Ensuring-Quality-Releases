@@ -31,7 +31,7 @@ def add_cart(driver, n_items):
         element = "a[id='item_" + str(i) + "_title_link']"
         driver.find_element_by_css_selector(element).click()
         driver.find_element_by_css_selector("button.btn_primary.btn_inventory").click()
-        product = driver.find_element_by_css_selector("div[class='inventory_details_name']").text
+        product = driver.find_element_by_css_selector(".inventory_details_name.large_size'").text
         print(timestamp() + product + " added to shopping cart.")
         driver.find_element_by_css_selector("button.inventory_details_back_button").click()
     print(timestamp() + '{:d} items are all added to shopping cart successfully.'.format(n_items))

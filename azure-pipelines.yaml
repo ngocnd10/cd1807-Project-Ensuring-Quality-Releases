@@ -85,7 +85,7 @@ stages:
         archiveFile: '$(Build.BuildId)-fakerestapi.zip'
     # FakeRestAPI - Publish    
     - publish: '$(Build.BuildId)-fakerestapi.zip'
-      displayName: 'Upload Package'
+      displayName: 'Upload FakeRestAPI'
       artifact: drop-fakerestapi
     #--------------------------------------------#
     # Selenium (UI) Test Suite - Archive the package  
@@ -191,6 +191,13 @@ stages:
                 targetType: inline
                 script: |
                   #!/bin/bash
+                  sudo apt-get upgrade -y
+                  sudo apt-get install python3-pip -y
+                  sudo apt-get install unzip -y
+                  sudo apt-get install -y chromium-browser
+                  pip3 install selenium
+                  export PATH=$PATH:/path/to/chromedriver 
+                   
                   chromium-browser -version
                   chromedriver --version
                   cd $(Pipeline.Workspace)/drop-selenium

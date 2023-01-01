@@ -46,7 +46,7 @@ module "appservice" {
   resource_group   = "${module.resource_group.resource_group_name}"
 }
 
-module "appservice" {
+module "appservice2" {
   source           = "../../modules/appservice2"
   location         = "${var.location}"
   application_type = "${var.application_type}"

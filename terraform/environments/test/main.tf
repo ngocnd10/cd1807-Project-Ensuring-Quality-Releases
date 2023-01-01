@@ -47,7 +47,7 @@ module "appservice" {
 }
 
 module "appservice" {
-  source           = "../../modules/appservice"
+  source           = "../../modules/appservice2"
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "AppService"

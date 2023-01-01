@@ -79,12 +79,12 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive FakeRestAPI'
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/automatedtesting/jmeter/fakerestapi'
+        rootFolderOrFile: 'automatedtesting/jmeter/fakerestapi'
         includeRootFolder: false
         archiveType: 'zip'
-        archiveFile: 'fakerestapi.zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-fakerestapi.zip'
     # FakeRestAPI - Publish    
-    - publish: 'fakerestapi.zip'
+    - publish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-fakerestapi.zip'
       displayName: 'Upload FakeRestAPI'
       artifact: drop-fakerestapi
     #--------------------------------------------#
@@ -112,7 +112,7 @@ stages:
   # ToDo: Provide <environment name> you created in your DevOps project
   - deployment: FakeRestAPI
     pool:
-      vmImage: 'Ubuntu-20.04'      
+      vmImage: 'Ubuntu-18.04'      
     environment: 'test'
     strategy:
       runOnce:
@@ -124,7 +124,7 @@ stages:
               azureSubscription: '$(azureServiceConnectionId2)'
               appName: 'ngocnd7-p3-app-AppService'
               appType: webApp
-              package: $(Pipeline.Workspace)/drop-fakerestapi/fakerestapi.zip
+              package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
               deploymentMethod: 'auto'
 - stage: Test
   jobs:

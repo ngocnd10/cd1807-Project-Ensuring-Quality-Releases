@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "ce481375-a240-4b99-9d90-9bd2b9c41ae7",
+		"name": "ValidationTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"var expectedBooks = 200;",
+							"",
+							"pm.test(\"Found books with IDs 1 - \" + expectedBooks, function () {",
+							"    for (i = 0; i < expectedBooks; i++) {",
+							"        pm.expect(jsonData[i].ID).to.eql(i+1);",
+							"    }",
+							"});",
+							"",
+							"pm.test(\"Total books found: \" + expectedBooks, function () {",
+							"    pm.expect(jsonData.length).to.eql(expectedBooks);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Create book response body as expected\", function () {",
+							"    pm.response.to.have.body(\"null\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books?book=book1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					],
+					"query": [
+						{
+							"key": "book",
+							"value": "book1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Book with ID 1 as expected\", function () {",
+							"    pm.expect(jsonData.ID).to.eql(1);",
+							"    pm.expect(jsonData.Title).to.eql(\"Book 1\");",
+							"    pm.expect(jsonData.PageCount).to.eql(100);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Update book response body as expected\", function () {",
+							"    pm.response.to.have.body(\"null\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books?book=book123&id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					],
+					"query": [
+						{
+							"key": "book",
+							"value": "book123"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Delete book response as expected\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

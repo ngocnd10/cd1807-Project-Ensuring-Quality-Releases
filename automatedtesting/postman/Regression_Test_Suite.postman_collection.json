@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "0b180b0d-ed51-4e7d-976f-0a25d6bf2701",
+		"name": "RegressionTestv2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get All Books endpoint response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Create Book endpoint response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books?book=book1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					],
+					"query": [
+						{
+							"key": "book",
+							"value": "book1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Book endpoint response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Update Book endpoint response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books?book=book123&id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books"
+					],
+					"query": [
+						{
+							"key": "book",
+							"value": "book123"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Delete Book endpoint response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

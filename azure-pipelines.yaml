@@ -226,7 +226,6 @@ stages:
       inputs:
         script: |
           pwd
-          ls automatedtesting
           ls automatedtesting/postman
           newman run automatedtesting/postman/Regression_Test_Suite.postman_collection.json -e automatedtesting/postman/Test_Suite.postman_environment.json --delay-request 5000 --bail newman -x --reporters cli,junit --reporter-junit-export Results/RegressionTests.xml --suppress-exit-code
         workingDirectory: '$(System.DefaultWorkingDirectory)'
@@ -236,7 +235,6 @@ stages:
       inputs:
         script: |
           pwd
-          ls automatedtesting
           ls automatedtesting/postman
           newman run automatedtesting/postman/Data_Validation_Test_Suite.postman_collection.json -e automatedtesting/postman/Data_Validation_Test_Suite.postman_environment.json --delay-request 5000 --bail newman -x --reporters cli,junit --reporter-junit-export Results/DataValidationTests.xml --suppress-exit-code
         workingDirectory: '$(System.DefaultWorkingDirectory)'

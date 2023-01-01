@@ -123,8 +123,9 @@ stages:
             inputs:
               azureSubscription: '$(azureServiceConnectionId2)'
               appName: 'ngocnd7-p3-app-AppService'
-              appType: webApp
+              appType: webAppLinux
               package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
+              deploymentMethod: 'auto'
 - stage: Test
   jobs:
   - job: Test_Jmeter

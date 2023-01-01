@@ -82,9 +82,9 @@ stages:
         rootFolderOrFile: '$(System.DefaultWorkingDirectory)/automatedtesting/jmeter/fakerestapi'
         includeRootFolder: false
         archiveType: 'zip'
-        archiveFile: '$(Build.BuildId)-fakerestapi.zip'
+        archiveFile: 'fakerestapi.zip'
     # FakeRestAPI - Publish    
-    - publish: '$(Build.BuildId)-fakerestapi.zip'
+    - publish: 'fakerestapi.zip'
       displayName: 'Upload FakeRestAPI'
       artifact: drop-fakerestapi
     #--------------------------------------------#
@@ -123,8 +123,8 @@ stages:
             inputs:
               azureSubscription: '$(azureServiceConnectionId2)'
               appName: 'ngocnd7-p3-app-AppService'
-              appType: webAppLinux
-              package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
+              appType: webApp
+              package: $(Pipeline.Workspace)/drop-fakerestapi/fakerestapi.zip
               deploymentMethod: 'auto'
 - stage: Test
   jobs:
